@@ -12,57 +12,31 @@ int EmptyPosition[COL] = {};
 
 char World[ROWS][COL] = {
   "                                                                               ",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "| |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |",
   "| | | |*| | | | | | | | | | | | | | |*| | | | | | | | | | | | | | | | |*| | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "| | | | | | | | | | | | | | | | | | | |*| | | | | | | | | | | | | | | | | | | |",
+  "|   |  *|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |  *|   | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
   "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | |*| | | | | | | | | | | | | | |*| | | | | | | | | | | | | | | | |*| | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
+  "| |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |",
 };
 
-char FrontWorld[ROWS][COL] = {
-  "                                                                               ",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-  "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |",
-};
 
 void RouteUpdatedInfo(int CEndPoint, int CStartPoint)
 {
@@ -134,7 +108,7 @@ struct Messages
 			x++;
 		};
 
-		cout << endl;
+		cout << endl;  
 
 		delay(2000);
 
@@ -164,9 +138,9 @@ struct Messages
 
 		cls();    // Clear Screen.
 
-		SetConsoleStyle(9, 20);
+		fontsize(13, 28);
 
-		SetConsoleWindowDimensions(1280, 720);
+		system("mode 650");
 	}
 };
 
@@ -264,15 +238,15 @@ public:
 							Score += 20;
 							CheckFood(x, y - 1);
 							World[x][y - 1] = ' ';
-							FrontWorld[x][y - 1] = ' ';
+							
 						}
 
 						World[x][y - 1] = SymbolPlayer;               // Store Player in Previous Positions.
 
 						World[x][y] = ' ';       // Makes Current Position Blank.
-						FrontWorld[x][y] = ' ';
+						
 
-						Shape.x = Shape.x - 9;        // Variable i controls Player Shape Movement.
+						Shape.x = Shape.x - 13;        // Variable i controls Player Shape Movement.
 
 						player.x = y - 1;
 
@@ -304,14 +278,14 @@ public:
 							Score += 20;
 							CheckFood(x, y + 1);
 							World[x][y + 1] = ' ';
-							FrontWorld[x][y + 1] = ' ';
+							
 						}
 
 						World[x][y] = ' ';      // Store Player in Forward Positions.
-						FrontWorld[x][y] = ' ';
+						
 						World[x][y + 1] = SymbolPlayer;
 
-						Shape.x = Shape.x + 9;        // Variable i controls Player Shape Movement.
+						Shape.x = Shape.x + 13;        // Variable i controls Player Shape Movement.
 
 						player.x = y + 1;
 
@@ -343,14 +317,14 @@ public:
 							Score += 20;
 							CheckFood(x - 1, y);
 							World[x - 1][y] = ' ';
-							FrontWorld[x - 1][y] = ' ';
+							
 						}
 
 						World[x - 1][y] = SymbolPlayer;
 
 						World[x][y] = ' ';
-						FrontWorld[x][y] = ' ';
-						Shape.y = Shape.y - 20;        // Variable i controls Player Shape Movement.
+						
+						Shape.y = Shape.y - 28;        // Variable i controls Player Shape Movement.
 
 						player.y = x - 1;
 
@@ -382,14 +356,14 @@ public:
 							Score += 20;
 							CheckFood(x + 1, y);
 							World[x + 1][y] = ' ';
-							FrontWorld[x + 1][y] = ' ';
+							
 						}
 
 						World[x + 1][y] = SymbolPlayer;
 
 						World[x][y] = ' ';
-						FrontWorld[x][y] = ' ';
-						Shape.y = Shape.y + 20;        // Variable i controls Player Shape Movement.
+						
+						Shape.y = Shape.y + 28;        // Variable i controls Player Shape Movement.
 
 						player.y = x + 1;
 
@@ -411,7 +385,6 @@ public:
 	{
 
 		World[x][y] = ' ';   // Enemy Laser Disappear.
-		FrontWorld[x][y] = ' ';
 
 		Lives--;                 // Lives Count Decrease.
 
@@ -479,11 +452,11 @@ public:
 								World[i + 1][j] = World[i][j];     // Move Starting Node Downwards.
 
 								World[i][j] = ' '; // Clears Previous Location.
-								FrontWorld[i][j] = ' ';
+								
 
 								enemy.y = enemy.y + 1;
 
-								Shape.y = Shape.y + 20;
+								Shape.y = Shape.y + 28;
 
 							}
 						}
@@ -506,9 +479,9 @@ public:
 
 								World[i - 1][j] = World[i][j];   // Move Starting Node Upwards.
 								World[i][j] = ' ';   // Clears Previous Location.
-								FrontWorld[i][j] = ' ';
+							
 								enemy.y = enemy.y - 1;
-								Shape.y = Shape.y - 20;
+								Shape.y = Shape.y - 28;
 							}
 						}
 					}
@@ -517,9 +490,9 @@ public:
 					{
 						World[i][j + 1] = World[i][j];       // Stores Start at Adjacent Location.
 						World[i][j] = ' ';   // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
+						
 						enemy.x = enemy.x + 1;
-						Shape.x = Shape.x + 9;
+						Shape.x = Shape.x + 13;
 					}
 
 					else if (World[i][j] == SymbolEnemy && World[i][j + 1] != ' ' && rand() % 4 == 2 && EmptyPosition[j] > i&& j != P.player.x)   // Checks if No Adjacent Route so Move the Starting Node based on Shortest distance from Route.
@@ -532,9 +505,9 @@ public:
 
 						World[i + 1][j] = World[i][j];   // In this Case it is below Starting Node Position so it moves downwards.
 						World[i][j] = ' ';     // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
+						
 						enemy.y = enemy.y + 1;
-						Shape.y = Shape.y + 20;
+						Shape.y = Shape.y + 28;
 					}
 
 					else if (World[i][j] == SymbolEnemy && World[i][j + 1] != ' ' && rand() % 4 == 2 && EmptyPosition[j] < i && j != P.player.x)
@@ -547,9 +520,9 @@ public:
 
 						World[i - 1][j] = World[i][j];      // In this Case it is Above Starting Node Position so it moves Upwards.
 						World[i][j] = ' ';      // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
+						
 						enemy.y = enemy.y - 1;
-						Shape.y = Shape.y - 20;
+						Shape.y = Shape.y - 28;
 					}
 
 				}
@@ -583,9 +556,9 @@ public:
 
 								World[i + 1][j] = World[i][j];     // Move Starting Node Downwards.
 								World[i][j] = ' '; // Clears Previous Location.
-								FrontWorld[i][j] = ' ';
+								
 								enemy.y = enemy.y + 1;
-								Shape.y = Shape.y + 20;
+								Shape.y = Shape.y + 28;
 							}
 						}
 
@@ -606,9 +579,9 @@ public:
 
 								World[i - 1][j] = World[i][j];   // Move Starting Node Upwards.
 								World[i][j] = ' ';   // Clears Previous Location.
-								FrontWorld[i][j] = ' ';
+								
 								enemy.y = enemy.y - 1;
-								Shape.y = Shape.y - 20;
+								Shape.y = Shape.y - 28;
 							}
 						}
 					}
@@ -617,9 +590,9 @@ public:
 					{
 						World[i][j - 1] = World[i][j];       // Stores Start at Adjacent Location.
 						World[i][j] = ' ';   // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
+						
 						enemy.x = enemy.x - 1;
-						Shape.x = Shape.x - 9;
+						Shape.x = Shape.x - 13;
 					}
 
 					else if (World[i][j] == SymbolEnemy && World[i][j - 1] != ' ' && rand() % 4 == 2 && EmptyPosition[j] > i&& j != P.player.x)   // Checks if No Adjacent Route so Move the Starting Node based on Shortest distance from Route.
@@ -632,9 +605,8 @@ public:
 
 						World[i + 1][j] = World[i][j];   // In this Case it is below Starting Node Position so it moves downwards.
 						World[i][j] = ' ';     // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
 						enemy.y = enemy.y + 1;
-						Shape.y = Shape.y + 20;
+						Shape.y = Shape.y + 28;
 					}
 
 					else if (World[i][j] == SymbolEnemy && World[i][j - 1] != ' ' && rand() % 4 == 2 && EmptyPosition[j] < i && j != P.player.x)
@@ -647,9 +619,8 @@ public:
 
 						World[i - 1][j] = World[i][j];      // In this Case it is Above Starting Node Position so it moves Upwards.
 						World[i][j] = ' ';      // Clears Previous Location.
-						FrontWorld[i][j] = ' ';
 						enemy.y = enemy.y - 1;
-						Shape.y = Shape.y - 20;
+						Shape.y = Shape.y - 28;
 					}
 				}
 			}
@@ -662,174 +633,112 @@ struct Shapes
 {
 	void InitializeShapes(Player& P, int EnemyX, int EnemyY)
 	{
-		SetConsoleWindowDimensions(1280, 720);
-
 		// Player
-		drawEllipse(186 + P.Shape.x, 103 + P.Shape.y, 200 + P.Shape.x, 117 + P.Shape.y, 0, 0, 0, 0, 255, 0);
+		drawEllipse(270 + P.Shape.x, 145 + P.Shape.y, 290 + P.Shape.x, 165 + P.Shape.y, 0, 0, 0, 0, 255, 0);
 
 		// Enemy
-		drawEllipse(718 + EnemyX, 103 + EnemyY, 732 + EnemyX, 117 + EnemyY, 0, 0, 0, 255, 0, 0);
+		drawEllipse(1050 + EnemyX, 145 + EnemyY, 1070 + EnemyX, 165 + EnemyY, 0, 0, 0, 255, 0, 0);
 
-		// Borders
-		{
-			// Top
-			drawLine(185, 20, 885, 20, 255);
-
-			// Bottom
-			drawLine(185, 480, 885, 480, 255);
-
-			// Left
-			drawLine(185, 19, 185, 480, 255);
-
-			// Right
-			drawLine(886, 19, 886, 480, 255);
-		}
-
-		// Lives
-		{
-			if (P.Lives == 3)
-			{
-				drawEllipse(817, 522, 832, 537, 0, 255, 0, 0, 255, 0);
-
-				drawEllipse(837, 522, 852, 537, 0, 255, 0, 0, 255, 0);
-
-				drawEllipse(857, 522, 872, 537, 0, 255, 0, 0, 255, 0);
-			}
-
-			else if (P.Lives == 2)
-			{
-				drawEllipse(817, 522, 832, 537, 0, 255, 0, 0, 255, 0);
-
-				drawEllipse(837, 522, 852, 537, 0, 255, 0, 0, 255, 0);
-
-				drawEllipse(857, 522, 872, 537, 0, 0, 0, 0, 0, 0);
-			}
-
-			else if (P.Lives == 1)
-			{
-				drawEllipse(817, 522, 832, 537, 0, 255, 0, 0, 255, 0);
-
-				drawEllipse(837, 522, 852, 537, 0, 0, 0, 0, 0, 0);
-			}
-
-			else if (P.Lives == 0)
-			{
-				drawEllipse(817, 522, 832, 537, 0, 0, 0, 0, 0, 0);
-			}
-		}
-
-		// Food
+		//Food
 		{
 			if (!P.FoodEaten[0])
 			{
-				// Food Top Left
-				drawEllipse(240, 43, 254, 57, 0, 0, 0, 255, 255, 0);
+				drawEllipse(347, 60, 367, 80, 0, 0, 0, 255, 255, 0);
 			}
-
 			if (!P.FoodEaten[1])
 			{
-				// Food Top Middle
-				drawEllipse(510, 43, 524, 57, 0, 0, 0, 255, 255, 0);
+				drawEllipse(737, 60, 757, 80, 0, 0, 0, 255, 255, 0);
 			}
-
 			if (!P.FoodEaten[2])
 			{
-				// Food Top Right
-				drawEllipse(816, 43, 830, 57, 0, 0, 0, 255, 255, 0);
+				drawEllipse(1180, 60, 1200, 80, 0, 0, 0, 255, 255, 0);
 			}
-
 			if (!P.FoodEaten[3])
 			{
-				// Food Bottom Left
-				drawEllipse(240, 403, 254, 417, 0, 0, 0, 255, 255, 0);
+				drawEllipse(347, 560, 367, 580, 0, 0, 0, 255, 255, 0);
 			}
-
 			if (!P.FoodEaten[4])
 			{
-				// Food Bottom Middle
-				drawEllipse(510, 403, 524, 417, 0, 0, 0, 255, 255, 0);
+				drawEllipse(765, 540, 785, 560, 0, 0, 0, 255, 255, 0);
 			}
-
 			if (!P.FoodEaten[5])
 			{
-				// Food Bottom Right
-				drawEllipse(816, 403, 830, 417, 0, 0, 0, 255, 255, 0);
+				drawEllipse(1180, 560, 1200, 580, 0, 0, 0, 255, 255, 0);
 			}
-		}
-	}
-
-	void CleanShapes()
-	{
-		// Lives
-		{
-			drawEllipse(817, 522, 832, 537, 0, 0, 0, 0, 0, 0);
-
-			drawEllipse(837, 522, 852, 537, 0, 0, 0, 0, 0, 0);
-
-			drawEllipse(857, 522, 872, 537, 0, 0, 0, 0, 0, 0);
 		}
 
 		// Borders
 		{
 			// Top
-			drawLine(185, 20, 885, 20, 0);
+			drawLine(265, 20, 1280, 20, 255);
 
 			// Bottom
-			drawLine(185, 480, 885, 480, 0);
+			drawLine(265, 670, 1280, 670, 255);
 
 			// Left
-			drawLine(185, 19, 185, 480, 0);
+			drawLine(266, 20, 266, 670, 255);
 
 			// Right
-			drawLine(886, 19, 886, 480, 0);
+			drawLine(1280, 20, 1280, 670, 255);
+		}
+
+		// Map Pattern 1
+		{
+			// First
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(293 + i, 20, 293 + i, 138, 255);
+			}
+			// Second
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(293 + i, 170, 293 + i, 277, 255);
+			}
+			// Third
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(293 + i, 310, 293 + i, 417, 255);
+			}
+			// Fourth
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(293 + i, 450, 293 + i, 557, 255);
+			}
+			// Last
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(293 + i, 590, 293 + i, 667, 255);
+			}
+
+		}
+
+		// Map Pattern 2
+		{
+			for (int i = 0; i < 988; i = i + 52)
+			{
+				drawLine(318 + i, 59, 318 + i, 642, 255);
+			}
 		}
 	}
 };
 
-void MakeRoute(Player& P, char Enemy)
-{
-	srand(unsigned int(time(NULL)));
-
-	for (int i = 1; i < ROWS; i++)             // Nested Loop to Access Array Elements
-	{
-		for (int j = 2; j < COL - 2; j++)
-		{
-			if (rand() % 3 == 2 && World[i][j] != P.SymbolPlayer && World[i][j] != P.Food && World[i][j] != Enemy)         // If a random time is true.
-			{
-				World[i][j] = ' ';    // Make a Space for Route.
-				FrontWorld[i][j] = ' ';
-			}
-
-		}
-	}
-}
-
 void DisplayWorld(int Score, int FoodLeft, int Lives)
 {
-
-	for (int y = 0; y < ROWS; y++)          // Loop to Display World|Array.
-	{
-		gotoxy(20, y);
-		cout << FrontWorld[y] << endl;
-	}
-
-	cout << "\n\t\t\tSCORE : " << Score << "\t\t      FOOD LEFT: " << FoodLeft << "\t\t     LIVES ";  // Score & Lives Display.
+	gotoxy(20, ROWS);
+	cout << "\n\t\t\tSCORE : " << Score << "\t\t    FOOD LEFT : " << FoodLeft << "\t\t    LIVES : " << Lives;  // Score & Lives Display.
 }
 
 int main()
 {
-	SetINTRO();
+	SetINTRO("A UI PRODUCTION!");
 
-	Player P(5, 1, 'O'); Enemy E(5, 60, '0'); Messages M; Shapes S;
+	Player P(5, 1, 'O'); Enemy E(5, 61, '0'); Messages M; Shapes S;
 
 	M.WelcomeMessage();
 
-	MakeRoute(P, E.SymbolEnemy);
-
 	while (P.Lives != 0 && P.FoodLeft != 0)
 	{
-		system("cls");
-		cls();
+		BlackBackground();
 		DisplayWorld(P.Score, P.FoodLeft, P.Lives);
 		S.InitializeShapes(P, E.Shape.x, E.Shape.y);
 		P.PlayerMovement();
@@ -839,11 +748,13 @@ int main()
 
 	system("cls");
 
-	S.CleanShapes();
+	BlackBackground();
 
 	M.OutputMessage(P.Score, P.Lives, P.FoodLeft);
 
 	delay(3000);
+
+	cin.get();
 
 	return 0;
 }

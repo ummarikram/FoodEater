@@ -218,11 +218,16 @@ void SetConsoleStyle(int x, int y)
 	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), 0, &cf);
 }
 
-void SetINTRO()
+void BlackBackground()
+{
+	drawRectangle(265, 20, 1285, 675, 0, 0, 0);
+}
+
+void SetINTRO(string Text)
 {
 	showConsoleCursor(false);
 
-	SetConsoleWindowDimensions(1280, 720);
+	system("mode 650");
 
 	Maximize();
 
@@ -230,27 +235,31 @@ void SetINTRO()
 
 	gotoxy(15, 5);
 
-	string hello = "A UI PRODUCTION!";
-
-	int len = hello.length();
+	int len = Text.length();
 
 	PlaySound(TEXT("Wind2.wav"), NULL, SND_FILENAME | SND_ASYNC);
 
-	
 	for (int i = 0; i < len; i++)
 	{
-		putchar(hello[i]);
+		putchar(Text[i]);
 
-		delay(500);
+		delay(450);
 	}
 
-	delay(4000);
+	for (int i = 0; i < 265; i++)
+	{
+		drawLine(460 + (i * 2), 330, 460 + (i * 2), 450, 0);
+
+		delay(25);
+	}
+	
+	delay(1000);
 
 	system("cls");
 	
-	fontsize(13, 28);
+	fontsize(26, 36);
 
-	SetConsoleWindowDimensions(1280, 720);
+	system("mode 650");
 
 	Maximize();
 
@@ -275,6 +284,5 @@ void SetINTRO()
 
 	system("cls");
 }
-
 
 #endif /* MYGRAPHICS_H_ */
